@@ -1,0 +1,19 @@
+/* © 2024 RendeLearn */
+
+/* table */
+
+.user-records-container1 {
+    padding-top: 20px;
+}
+
+.user-records-container1 .table {
+    border-collapse: separate;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+  
+.user-records-container1 .table-bordered th,
+.user-records-container1 .table-bordered td {
+    border: 1px solid black;
+}

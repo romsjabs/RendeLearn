@@ -1,0 +1,351 @@
+/* © 2024 RendeLearn */
+
+/* login page */
+
+.login {
+    background-color: lightgray;
+    border-radius: 8px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+    margin: 10vh auto;
+    width: 90vw;
+    max-width: 1000px;
+    height: auto;
+    max-height: 430px;
+}
+
+@media (max-width: 1440px) { /* 150 zoom */
+
+    .login {
+        position: relative;
+        bottom: 50px;
+    }
+
+}
+
+@media (max-width: 1098px) { /* 175 zoom */
+
+    .login {
+        position: relative;
+        bottom: 81px;
+    }
+
+}
+
+@media (max-width: 960px) { /* 200 zoom */
+
+    .login {
+        position: relative;
+        bottom: 80px;
+        right: 60px;
+        
+    }
+    
+}
+
+@media (max-width: 768px) { /* 250 zoom */
+
+    .login {
+        position: relative;
+        bottom: 50px;
+        right: 0;
+        max-width: 460px;
+    }
+}
+
+@media (max-width: 480px) { /* 400 zoom */
+
+    /*.login {
+        
+    }
+
+    body {
+        
+    }
+    */
+}
+
+/* userpass-field */
+
+.form-control {
+    width: 355px;
+}
+
+@media (max-width: 502px) {
+    .form-control {
+        width: 70vw;
+    }
+}
+
+.form-control:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 0.2rem #429c9c;
+    outline: 0;
+}
+
+.acc-username, .acc-password,
+.remember-credentials,
+.forgot-password,
+.sign-in {
+    position: relative;
+    top: 30px;
+}
+
+.forgot-password {
+    position: relative;
+    right: 5px;
+}
+
+.forgot-password:hover {
+    color: gray;
+}
+
+/* cred box */
+.credentials-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* remember acc */
+.remember-credentials {
+    display: flex;
+    align-items: center;
+}
+
+.remember-credentials input {
+    margin-right: 5px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.remember-credentials .clickable {
+    cursor: pointer;
+}
+
+/* forgot pass */
+.forgot-password {
+    margin-left: 6.5ch;
+    cursor: pointer;
+}
+
+.forgot-password-btn {
+    text-decoration: none;
+    color: #024D50;
+    transition: all 0.2s ease;
+}
+
+.forgot-password-btn:hover {
+    color: gray;
+}
+
+@media (max-width: 480px) {
+    .forgot-password {
+        margin-left: 4.6ch;
+    }
+}
+
+@media (max-width: 409px) {
+    .remember-credentials .clickable {
+        font-size: 14px;
+    }
+    
+    .forgot-password {
+        font-size: 14px;
+        margin-left: 1.6ch;
+    }
+}
+
+/* sign-in button */
+.sign-in .btn {
+    background-color: #089da0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 150px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 576px) {
+    .sign-in .btn {
+        font-size: 14px;
+        padding: 10px 153px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 575px) {
+    .sign-in .btn {
+        padding: 10px 27.3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .sign-in .btn {
+        padding: 10px 29.8vw;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 479px) {
+    .sign-in .btn {
+        padding: 10px 28.5vw;
+    }
+}
+
+.sign-in .btn:hover {
+    background-color: #2e6161;
+}
+
+/* catch error */
+.email-error, .username-error,
+.password-error {
+    position: absolute;
+    font-weight: bold;
+    color: #c01212;
+}
+
+.email-error {
+    transform: translateY(5px);
+}
+
+.username-error {
+    transform: translateY(25px);
+}
+
+.password-error {
+    transform: translateY(95px);
+}
+
+/* sign up */
+.signup-image {
+    position: relative;
+    transform: translate(308px, -352.5px);
+    clip-path: inset(0 0 0 100px);
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1098px) {
+    .signup-image {
+        position: relative;
+        transform: translate(308px, -349.5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-image {
+        position: relative;
+        transform: translate(-48.5px, 84px);
+        clip-path: inset(0 -96px 50px 0);
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-image {
+        position: relative;
+        bottom: 43.5px;
+    }
+}
+
+.signup-image img {
+    border-radius: 8px;
+}
+
+.signup-info {
+    text-align: center;
+    position: relative;
+    bottom: 700px;
+    left: 520px;
+    color: white;
+    text-align: center;
+}
+
+.signup-font-size {
+    font-size: 50px;
+}
+
+.signup-button {
+    position: relative;
+    bottom: 650px;
+    left: 640px;
+}
+
+@media (max-width: 768px) {
+
+    .signup-font-size {
+        position: relative;
+        right: 500px;
+        top: 400px;
+    }
+    
+    .signup-button {
+        position: relative;
+        left: 150px;
+        bottom: 250px;
+    }
+
+    .signup-info {
+        position: relative;
+        bottom: 680px;
+    }
+
+    .signup-button {
+        position: relative;
+        left: 146px;
+        bottom: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .signup-image {
+        position: relative;
+        bottom: 50px;
+    }
+
+    .signup-info {
+        position: relative;
+        bottom: 730px;
+        left: 510px;
+    }
+
+    .signup-button {
+        position: relative;
+        bottom: 300px;
+        left: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-info {
+        position: relative;
+        left: 500px;
+    }
+
+    .signup-button {
+        position: relative;
+        left: 130px;
+    }
+}
+
+.signup-info, .signup-button {
+    position: relative;
+    transform: translateY(-10px);
+}
+
+/* position the login card together */
+.login {
+    position: relative;
+    transform: translateY(40px);
+}
+
+footer {
+    position: relative;
+    top: 800px;
+}

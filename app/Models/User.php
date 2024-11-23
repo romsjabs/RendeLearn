@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -10,37 +9,39 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasApiTokens;
+
+    protected $fillable = ['email', 'username', 'password'];
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
+     * Check if the user has the required records (profile completed, etc.)
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'username',
-    ];
+    public function hasRequiredRecords()
+    {
+        return $this->credential()->exists() && $this->address()->exists() && $this->validation()->exists();
+    }
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
+     * Get the credentials for the user.
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    public function credential()
+    {
+        return $this->hasMany(Credential::class);
+    }
 
     /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
+     * Get the address for the user.
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
+    public function address()
+    {
+        return $this->hasMany(Address::class);
+    }
+
+    /**
+     * Get the validation for the user.
+     */
+    public function validation()
+    {
+        return $this->hasMany(Validation::class);
+    }
 }

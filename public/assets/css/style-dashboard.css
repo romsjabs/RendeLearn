@@ -1,0 +1,83 @@
+/* © 2024 RendeLearn */
+
+/* title */
+.dashboard-title {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* container */
+.dashboard-container {
+    padding: 30px;
+}
+
+.dashboard-container1 {
+    display: flex;
+    gap: 20px;
+}
+
+/* card */
+.card1, .card2, .card3, .card4 {
+    display: flex;
+    gap: 20px;
+    background: lightgray;
+    padding: 15px;
+    border-radius: 15px;
+    height: 130px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-count1, .card-count2,
+.card-count3, .card-count4 {
+    margin-top: auto;
+    position: relative;
+    top: 10px; 
+}
+
+/* tables */
+.transaction-title {
+    padding-top: 20px; 
+}
+
+.dashboard-container2 {
+    display: flex; 
+    gap: 20px; 
+    flex-direction: column; 
+}
+
+.transaction-wrapper {
+    display: flex; 
+    gap: 20px; 
+    flex-direction: row; 
+}
+
+.transaction-container1, .transaction-container2 {
+    width: 500px; 
+    font-size: 14px; 
+}
+
+.table th, .table td {
+    border: none; /* Removes all borders from cells */
+    padding: 5px; /* Increases padding inside each cell */
+}
+
+.table th {
+    background-color: #f2f2f2; /* Light gray background for header */
+}
+
+.table-hover tbody tr:hover,
+.table-hover tbody tr:hover td {
+    cursor: pointer;
+    background-color: #07e0e010;
+}
+
+.table-hover tbody tr:hover td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.table-hover tbody tr:hover td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

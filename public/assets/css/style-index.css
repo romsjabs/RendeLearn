@@ -1,0 +1,154 @@
+/* © 2024 RendeLearn */
+
+/* landing page */
+
+.content {
+    background-image: url('img/landing-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 900px;
+}
+
+.index-title {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: -350px;
+    top: 120px;
+    max-width: 100%;
+    font-weight: 320;
+    font-size: 45px;
+    color: white;
+}
+
+/* selector */
+.tutor-finder {
+    background-color: lightgray;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 400px;
+    margin: 0 0 0 53vw;
+    padding: 20px;
+    position: relative;
+}
+
+.subject-select,
+.location-select,
+.search-index {
+    
+}
+
+.form-select, .form-control, .search-index {
+    width: 440px;
+}
+
+.form-select, .form-control {
+    
+}
+
+.age-title {
+    transform: translateX(-30px)
+}
+
+.radio-select.age1, .form-check-input.age1,
+.radio-select.age2, .form-check-input.age2,
+
+.agegroup1, .agegroup2,
+.agegroup3, .agegroup4,
+.agegroup5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    transform: translateX(20px);
+}
+
+.radio-select.age1, .radio-select.age2 {
+    transform: translateY(-40px);
+}
+
+.form-check-input.age1, .form-check-input.age2 {
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #009292; /* Background color when checked */
+    border-color: transparent; /* Border color when checked */
+    box-shadow: 0 0 0 0.2rem #0061614f; /* Box shadow when checked */
+}
+
+.form-check-input:hover {
+    border-color: transparent; /* Border color when checked */
+    box-shadow: 0 0 0 0.2rem #0061614f; /* Box shadow when checked */
+}
+
+.search-button {
+    background-color: #009292; /* Sets the background color */
+    color: white;              /* Sets the text color */
+    border: none;              /* Removes default border */
+    padding: 10px 20px;        /* Adds padding for a better button appearance */
+    border-radius: 8px;        /* Rounds the corners */
+    cursor: pointer;           /* Changes the cursor to a pointer */
+    font-size: 16px;           /* Sets the font size */
+    display: flex;             /* Allows for horizontal alignment of icon and text */
+    align-items: center;       /* Vertically centers the items */
+    transition: all 0.3s ease;
+    transform: translateY(-30px)
+}
+
+.search-button i {
+    margin-right: 8px;         /* Adds space between the icon and the text */
+}
+
+.search-button:hover {
+    background-color: #007d7d; /* Optional: changes the background color on hover */
+}
+
+.form-control {
+    width: 30vw;
+}
+
+
+.title1,
+.card1, .card2,
+.card3, .card4 {
+    transform: translateY(440px);
+}
+
+.overview1, .overview2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.title1 {
+    text-align: center;
+}
+
+.card1, .card2, .card3, .card4 {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.desc1, .desc2, .desc3, .desc4 {
+    text-align: justify;
+    color: #333;
+    padding: 0;
+}
+
+
+footer {
+    position: relative;
+    top: 800px;
+}

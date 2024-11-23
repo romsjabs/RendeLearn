@@ -1,0 +1,215 @@
+/* © 2024 RendeLearn */
+
+/* sign-up */
+
+.content {
+    background-image: url('img/signup-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.signup-title {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    color: white;
+}
+
+.signup-title .title-text {
+    position: relative;
+    top: 5px;
+}
+
+.signup-title1, .signup-title2, .signup-title3,
+.signup-title1-1, .signup-title1-2, .signup-title1-3,
+.signup2-title1
+
+{
+    background-color: #089da0;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+}
+
+.signup-title1 {
+    transform: translate(-460px, -356px);
+}
+
+.signup-title2 {
+    transform: translate(-482.3px, -266px);
+}
+
+.signup-title3 {
+    transform: translate(-479.3px, -318px);
+}
+
+.signup-title1-1 {
+    transform: translate(-498px, -356px);
+}
+
+.signup2-title1 {
+    transform: translate(-410px, -266px);
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-card1, .signup-card2, .signup-card3,
+.signup2-card1, .signup2-card2 {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.signup-card1, .signup-card2, .signup-card3 {
+    align-items: center;
+}
+
+.signup2-0 {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    right: 353px;
+    margin-top: 20px;
+}
+
+.signup1, .signup2, .signup3,
+.signup1-1, .signup1-2, .signup1-3,
+.signup2-1, .signup2-2,
+
+.signup-container1, .signup-container2
+
+{
+    display: flex;
+    padding: 20px;
+    margin-bottom: -20px;
+    gap: 8px;
+}
+
+.signup-container1, .signup-container2, .info-container1 {
+    gap: 20px;
+}
+
+.signup-container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.info-container1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 30px;
+}
+
+.front-id, .back-id {
+    margin-bottom: 8px;
+}
+
+.front-id {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload-id {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.press-here1 {
+    font-size: 12px;
+    background-color: white;
+    padding: 6.8px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    right: 4.5px;
+}
+
+.upload-selfie, .id-number {
+    margin-bottom: 6px;
+}
+
+.upload-selfie {
+    display: flex;
+    justify-content: space-between;
+}
+
+.id-number {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.id-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.required {
+    font-weight: bold;
+    color: #c01212;
+}
+
+.button-next {
+    transform: translate(510px, -30px)
+}
+
+.button-previous {
+    transform: translate(-510px, 0px)
+}
+
+.button-previous .btn, .button-next .btn {
+    background-color: #089da0;
+    border-color: transparent;
+}
+
+.button-previous .btn:hover, .button-next .btn:hover {
+    background-color: #397a7a;
+}
+
+footer {
+    position: relative;
+    top: 1000px;
+}
+
+/* step 2 */
+
+.button1-next {
+    transform: translate(198px, -30px)
+}
+
+.button1-previous {
+    transform: translate(-213px, 0px)
+}
+
+.button1-previous .btn, .button1-next .btn {
+    background-color: #089da0;
+    border-color: transparent;
+}
+
+.button1-previous .btn:hover, .button1-next .btn:hover {
+    background-color: #397a7a;
+}
+
+footer {
+    position: relative;
+    top: 1000px;
+}

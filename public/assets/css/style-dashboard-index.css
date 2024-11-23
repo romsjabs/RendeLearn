@@ -1,0 +1,59 @@
+/* © 2024 RendeLearn */
+
+/* defaults */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.all-transactions a {
+    color: black;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+}
+
+/* menu */
+.dashboard-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    background-color: #0D2C42;
+    color: white;
+    position: relative;
+    width: 250px;
+    height: 1000px;
+}
+
+.home-btn {
+    position: relative;
+    left: 10px;
+}
+
+.user-records-btn {
+    position: relative;
+    left: 11.5px;
+}
+
+.sessions-btn {
+    position: relative;
+    left: 13.5px;
+}
+
+.admin-settings-btn {
+    position: relative;
+    left: 13px;
+}
+
+.debug-btn {
+    position: relative;
+    left: 10px;
+}
+
+.logout-btn {
+    position: relative;
+    left: 10px;
+}

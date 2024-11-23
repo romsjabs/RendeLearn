@@ -1,0 +1,45 @@
+/* © 2024 RendeLearn */
+
+/* modal */
+
+/* Customize modal header background color */
+.modal-header {
+    background-color: #009292; /* Change the header background color */
+    color: white; /* Make the text white for contrast */
+}
+
+/* Customize close button */
+.modal-header .btn-close {
+    background-color: white; /* White close button */
+    border-radius: 50%; /* Make it circular */
+}
+
+/* Customize modal footer buttons */
+.modal-footer .btn-primary {
+    background-color: #009292; /* Custom primary button color */
+    border-color: transparent; /* Custom border color */
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #086d70;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d; /* Custom secondary button color */
+    border-color: transparent; /* Custom border color */
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #56595c;
+}
+
+/* Modal content size adjustments */
+.modal-dialog {
+    max-width: 600px; /* Set a max width for the modal */
+}
+
+.modal-content {
+    padding: 20px; /* Add some padding inside the modal */
+    border-radius: 8px; /* Add rounded corners to the modal */
+}
+

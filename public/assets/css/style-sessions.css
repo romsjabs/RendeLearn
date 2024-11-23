@@ -1,0 +1,75 @@
+/* © 2024 RendeLearn */
+
+.user-records-wrapper {
+    padding: 30px;
+}
+
+/* title */
+.user-records-title {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* tab wrapper */
+
+.user-records-tab-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* tabs */
+
+.user-records-tab, .user-records-container1 {
+    font-size: 14px;
+}
+
+.user-records-tab .nav-item {
+    margin-right: 10px;
+}
+
+.user-records-tab .nav-link:first-child {
+    margin-left: 5px;
+}
+
+.user-records-tab .nav-item:last-child {
+    margin-right: 5px;
+}
+
+.user-records-tab .nav-link {
+    color: rgb(77, 77, 77); /* Text color */
+}
+  
+.user-records-tab .nav-link.active {
+    color: #009192; /* Active text color */
+}
+  
+.user-records-tab .nav-link:hover {
+    color: #009192; /* Hover text color */
+}
+
+.user-records-tab .nav-link:focus {
+    color: #009192;
+    border-color: #009192;
+}
+
+.user-records-tab {
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* buttons */
+
+.user-records-crud-btn .btn-primary {
+    background-color: #009192; /* Custom blue */
+    border-color: #009192;
+    transition: 350ms;
+}
+  
+.user-records-crud-btn .btn-primary:hover {
+    background-color: #024D50; /* Darker blue on hover */
+    border-color: #024D50;
+}
+
+.user-records-crud-btn .btn-danger {
+    transition: 350ms;
+}

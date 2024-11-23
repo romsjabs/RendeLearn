@@ -1,0 +1,14 @@
+/* © 2024 RendeLearn */
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 80px
+}
+
