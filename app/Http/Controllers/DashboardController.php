@@ -10,8 +10,8 @@ class DashboardController extends Controller
 {
     public function dashboard(Request $request)
 {
-    // Get total user count
     $totalUsers = User::count();
+    $totalStudents = User::where('role', 'student')->count();
     
     // Fetch the total transactions count and pagination details
     $transactionsPerPage = 10;
@@ -22,7 +22,7 @@ class DashboardController extends Controller
     
     // Get the current page from the request, default to page 1
     $page = $request->input('modalPage', 1);
-    
+
     $allTransactions = Transaction::orderBy('transaction_date', 'desc')
                                  ->skip(($page - 1) * $transactionsPerPage)
                                  ->take($transactionsPerPage * 2) // Fetch twice the amount for merging
@@ -33,7 +33,7 @@ class DashboardController extends Controller
     $transactionsRight = $allTransactions->slice($transactionsPerPage, $transactionsPerPage);
 
     // Return the dashboard view with the required data
-    return view('dashboard', compact('totalUsers', 'transactionsLeft', 'transactionsRight', 'totalPages'));
+    return view('dashboard', compact('totalUsers', 'totalStudents', 'transactionsLeft', 'transactionsRight', 'totalPages'));
 }
 
 public function getTransactions(Request $request)

@@ -176,7 +176,7 @@
                                     </div>
                                 </div>
 
-                                <h1 class="card-count2">/*$studentsCount*/</h1>
+                                <h1 class="card-count2">{{$totalStudents}}</h1>
                             </div>
 
                         </div>

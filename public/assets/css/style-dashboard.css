@@ -27,16 +27,24 @@
     gap: 20px;
     background: lightgray;
     padding: 15px;
+    height: 120px;
     border-radius: 15px;
-    height: 130px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-header1, .card-header2,
+.card-header3, .card-header4 {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
 }
 
 .card-count1, .card-count2,
 .card-count3, .card-count4 {
-    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
     position: relative;
-    top: 10px; 
+    top: 25px;
 }
 
 /* tables */
