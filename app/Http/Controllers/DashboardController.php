@@ -33,12 +33,6 @@ class DashboardController extends Controller
     $transactionsLeft = $allTransactions->slice(0, $transactionsPerPage);
     $transactionsRight = $allTransactions->slice($transactionsPerPage, $transactionsPerPage);
 
-    // If the request is an AJAX request, return the modal content
-    if ($request->ajax()) {
-        $modalContent = view('partials.transaction-modal-content', compact('allTransactions', 'totalPages'))->render();
-        return response()->json(['html' => $modalContent]);
-    }
-
     // Return the dashboard view with the required data
     return view('dashboard', compact('totalUsers', 'transactionsLeft', 'transactionsRight', 'totalPages'));
 }
