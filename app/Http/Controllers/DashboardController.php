@@ -22,8 +22,7 @@ class DashboardController extends Controller
     
     // Get the current page from the request, default to page 1
     $page = $request->input('modalPage', 1);
-
-    // Fetch transactions for the current page, ordered by date descending
+    
     $allTransactions = Transaction::orderBy('transaction_date', 'desc')
                                  ->skip(($page - 1) * $transactionsPerPage)
                                  ->take($transactionsPerPage * 2) // Fetch twice the amount for merging
@@ -35,6 +34,19 @@ class DashboardController extends Controller
 
     // Return the dashboard view with the required data
     return view('dashboard', compact('totalUsers', 'transactionsLeft', 'transactionsRight', 'totalPages'));
+}
+
+public function getTransactions(Request $request)
+{
+    $transactionsPerPage = 10;
+    $page = $request->input('page', 1);
+    
+    $transactions = Transaction::orderBy('transaction_date', 'desc')
+                               ->skip(($page - 1) * $transactionsPerPage)
+                               ->take($transactionsPerPage)
+                               ->get();
+    
+    return response()->json(['transactions' => $transactions]);
 }
 
 }

@@ -342,7 +342,33 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('#viewAllTransactionsModal').on('show.bs.modal', function () {
+        loadModalPage(1); // Automatically load the first page
+    });
 
+    function loadModalPage(page) {
+        $.ajax({
+            url: '/transactions?page=' + page, // Adjust URL as necessary
+            type: 'GET',
+            success: function(data) {
+                $('#modal-body tbody').empty(); // Clear existing data
+                data.transactions.forEach(function(transaction) {
+                    $('#modal-body tbody').append(`
+                        <tr>
+                            <td>${transaction.transaction_date}</td>
+                            <td>${transaction.transaction_type}</td>
+                            <td>${transaction.reference_number}</td>
+                        </tr>
+                    `);
+                });
+            },
+            error: function() {
+                console.error('Error loading transactions');
+            }
+        });
+    }
+    </script>
     <script src="{{asset('assets/js/modal.js')}}"></script>
     <script src="{{asset('assets/js/img-lock.js')}}"></script>
     <script src="{{asset('assets/js/responsive.js')}}"></script>

@@ -36,7 +36,7 @@ Route::get('/', function () {
 // Dashboard routes
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::post('dashboard/transactions', [DashboardController::class, 'dashboard'])->name('dashboard.transactions');
+    Route::get('/transactions', [DashboardController::class, 'getTransactions']);
 
 });
 
