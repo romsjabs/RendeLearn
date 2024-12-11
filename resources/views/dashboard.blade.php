@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Dashboard | RendeLearn</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -231,7 +230,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($transactions as $transaction)
+                                    @foreach ($transactionsLeft as $transaction)
                                         <tr>
                                             <td>{{$transaction->transaction_date}}</td>
                                             <td>{{$transaction->transaction_type}}</td>
@@ -253,7 +252,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($transactions as $transaction)
+                                    @foreach ($transactionsRight as $transaction)
                                         <tr>
                                             <td>{{$transaction->transaction_date}}</td>
                                             <td>{{$transaction->transaction_type}}</td>
@@ -293,7 +292,18 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="modal-body">
-                    <!-- Content will be loaded dynamically -->
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Transaction</th>
+                                <th>Reference</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
                 </div>
 
                 <div class="all-transaction-buttons" id="pagination-buttons" style="display: flex; justify-content: flex-end; gap: 5px;">
@@ -332,34 +342,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        function loadModalPage(pageNumber) {
-        $.ajax({
-            type: "POST",
-            url: "{{ route('dashboard.transactions') }}",
-            data: {
-                modalPage: pageNumber,
-                _token: "{{ csrf_token() }}"
-            },
-            success: function(response) {
-                let rows = '';
-                response.transactions.forEach(function(transaction) {
-                    rows += `
-                        <tr>
-                            <td>${transaction.transaction_date}</td>
-                            <td>${transaction.transaction_type}</td>
-                            <td>${transaction.reference_number}</td>
-                        </tr>
-                    `;
-                });
-                $("#modal-body").html('<table class="table table-hover"><thead><tr><th>Date</th><th>Transaction</th><th>Reference</th></tr></thead><tbody>' + rows + '</tbody></table>');
-            },
-            error: function(xhr, status, error) {
-                console.log(xhr.responseText);
-            }
-        });
-        }
-    </script>
+
     <script src="{{asset('assets/js/modal.js')}}"></script>
     <script src="{{asset('assets/js/img-lock.js')}}"></script>
     <script src="{{asset('assets/js/responsive.js')}}"></script>

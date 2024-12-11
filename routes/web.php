@@ -36,7 +36,8 @@ Route::get('/', function () {
 // Dashboard routes
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::post('/dashboard/transactions', [DashboardController::class, 'getModalTransactions'])->name('dashboard.transactions');
+    Route::post('dashboard/transactions', [DashboardController::class, 'dashboard'])->name('dashboard.transactions');
+
 });
 
 // Routes that require authentication

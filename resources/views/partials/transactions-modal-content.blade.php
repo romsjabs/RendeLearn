@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($transactions as $transaction)
+        @foreach ($allTransactions as $transaction)
             <tr>
                 <td>{{ $transaction->transaction_date }}</td>
                 <td>{{ $transaction->transaction_type }}</td>
