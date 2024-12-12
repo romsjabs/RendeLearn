@@ -87,4 +87,16 @@ class UserRecordsController extends Controller
         $users = Credential::where('role', 'admin')->get(); // Assuming you have a User model that fetches all users
         return view('user-records-admin', compact('users'));
     }
+
+    public function studentView()
+    {
+        $users = Credential::where('role', 'student')->get(); // Assuming you have a User model that fetches all users
+        return view('user-records-student', compact('users'));
+    }
+
+    public function tutorView()
+    {
+        $users = Credential::where('role', 'tutor')->get(); // Assuming you have a User model that fetches all users
+        return view('user-records-tutor', compact('users'));
+    }
 }

@@ -118,7 +118,7 @@
             </div>
 
             <div class="user-records">
-                <a href="user-records.php">
+                <a href="{{route('user-records')}}">
                     <i class="fa-solid fa-table"></i>
                     <span class="user-records-btn">User Records</span>
                 </a>
@@ -169,10 +169,10 @@
                             <a class="nav-link" href="{{route('user-records-admin')}}">Admins</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="user-records-students.php">Students</a>
+                            <a class="nav-link" href="{{route('user-records-student')}}">Students</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="user-records-tutors.php">Tutors</a>
+                            <a class="nav-link" href="{{route('user-records-tutor')}}">Tutors</a>
                         </li>
                     </ul>
                 </div>

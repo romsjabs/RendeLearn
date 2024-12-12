@@ -166,10 +166,10 @@
                             <a class="nav-link" href="{{route('user-records')}}">All</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{route('user-records-admin')}}">Admins</a>
+                            <a class="nav-link" href={{route('user-records-admin')}}">Admins</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('user-records-student')}}">Students</a>
+                            <a class="nav-link active" href="{{route('user-records-student')}}">Students</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('user-records-tutor')}}">Tutors</a>

@@ -53,10 +53,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
 // User Records routes
 
 Route::middleware(['auth', ])->group(function () {
-    Route::get('/user-records', [UserRecordsController::class, 'index'])->name('user-records'); // Points to index()
-    Route::get('/user-records-admin', [UserRecordsController::class, 'adminView'])->name('user-records-admin'); // Points to index()
-    Route::post('/user-records', [UserRecordsController::class, 'store'])->name('user-records.store'); // Points to store()
-    Route::put('/user-records/{id}', [UserRecordsController::class, 'update'])->name('user-records.update'); // Points to update()
+    Route::get('/user-records', [UserRecordsController::class, 'index'])->name('user-records');
+    Route::get('/user-records-admin', [UserRecordsController::class, 'adminView'])->name('user-records-admin');
+    Route::get('/user-records-student', [UserRecordsController::class, 'studentView'])->name('user-records-student');
+    Route::get('/user-records-tutor', [UserRecordsController::class, 'tutorView'])->name('user-records-tutor');
+
+
+    Route::post('/user-records', [UserRecordsController::class, 'store'])->name('user-records.store');
+    Route::put('/user-records/{id}', [UserRecordsController::class, 'update'])->name('user-records.update');
     Route::post('/user-records/delete', [UserRecordsController::class, 'destroy'])->name('user-records.delete');
 });
 
