@@ -146,7 +146,10 @@
             </div>
 
             <div class="logout">
-                <a href="logout.html">
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                </form>
+                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span class="logout-btn">Logout</span>
                 </a>
