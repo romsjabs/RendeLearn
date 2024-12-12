@@ -9,6 +9,10 @@
     color: #c01212;
 }
 
+.dashboard-wrapper {
+    display: flex;
+}
+
 /* title */
 .user-records-title {
     display: flex;

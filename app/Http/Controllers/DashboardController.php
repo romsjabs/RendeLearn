@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Credential;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,9 @@ class DashboardController extends Controller
     public function dashboard(Request $request)
 {
     $totalUsers = User::count();
-    $totalStudents = User::where('role', 'student')->count();
+    $totalStudents = Credential::where('role', 'student')->count();
+    $totalTutors = Credential::where('role', 'tutor')->count();
+    $totalAdmins = Credential::where('role', 'admin')->count();
     
     // Fetch the total transactions count and pagination details
     $transactionsPerPage = 10;
@@ -33,7 +36,7 @@ class DashboardController extends Controller
     $transactionsRight = $allTransactions->slice($transactionsPerPage, $transactionsPerPage);
 
     // Return the dashboard view with the required data
-    return view('dashboard', compact('totalUsers', 'totalStudents', 'transactionsLeft', 'transactionsRight', 'totalPages'));
+    return view('dashboard', compact('totalUsers', 'totalStudents', 'totalTutors', 'totalAdmins'    , 'transactionsLeft', 'transactionsRight', 'totalPages'));
 }
 
 public function getTransactions(Request $request)

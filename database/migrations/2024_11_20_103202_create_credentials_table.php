@@ -16,11 +16,14 @@ return new class extends Migration
             $table->timestamps();
 
             $table->unsignedBigInteger('user_id');
+            /*
             $table->foreign('user_id', 'credentials_id')
             ->references('id')
             ->on('users')
             ->onDelete('cascade');
+            */
 
+            $table->enum('role',['student', 'tutor', 'admin']);
             $table->string('firstname');
             $table->string('middlename')->nullable();
             $table->string('lastname');
@@ -34,7 +37,7 @@ return new class extends Migration
             $table->string('religion')->nullable();
             $table->string('nationality');
 
-            $table->string('mobilenumber');
+            $table->string('mobilenumber')->nullable();
             $table->string('landlinenumber')->nullable();
         });
     }

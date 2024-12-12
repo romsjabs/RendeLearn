@@ -10,10 +10,10 @@ class Credential extends Model
     use HasFactory;
     
     protected $fillable = [
-        'firstname', 'middlename', 'lastname', 'extension',
+        'role', 'firstname', 'middlename', 'lastname', 'extension',
         'gender', 'birthdate', 'birthplace',
         'civilstatus', 'religion', 'nationality',
-        'mobilenumber', 'landlinenumber', 'user_id'
+        'mobilenumber', 'landlinenumber', 'id', 'user_id'
     ];
 
     public function user()

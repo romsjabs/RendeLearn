@@ -107,7 +107,7 @@
                 </div>
 
                 <div class="user-records">
-                    <a href="user-records.php">
+                    <a href="{{route('user-records')}}">
                         <i class="fa-solid fa-table"></i>
                         <span class="user-records-btn">User Records</span>
                     </a>
@@ -135,7 +135,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="logout.html">
+                    <a href="{{route('logout')}}">
                         <i class="fa-solid fa-right-from-bracket"></i>
                         <span class="logout-btn">Logout</span>
                     </a>
@@ -157,11 +157,11 @@
                                 <div class="card-header1">
                                     <span class="card-title1">Total&nbsp;users</span>
                                     <div class="card-icon1">
-                                    <i class="fa-solid fa-user-group"></i>
+                                    <i class="fa-solid fa-user-group" style="position: relative; left: 50px;"></i>
                                     </div>
                                 </div>
                                 
-                                <h1 class="card-count1">{{$totalUsers}}</h1>
+                                <h1 class="card-count1" style="position: relative; left: 50px;">{{$totalUsers}}</h1>
                             </div>
 
                         </div>
@@ -172,11 +172,11 @@
                                 <div class="card-header2">
                                     <span class="card-title2">Students</span>
                                     <div class="card-icon2">
-                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <i class="fa-solid fa-graduation-cap" style="position: relative; left: 65px;"></i>
                                     </div>
                                 </div>
 
-                                <h1 class="card-count2">{{$totalStudents}}</h1>
+                                <h1 class="card-count2" style="position: relative; left: 65px;">{{$totalStudents}}</h1>
                             </div>
 
                         </div>
@@ -187,11 +187,11 @@
                             <div class="card-header3">
                                 <span class="card-title3">Tutors</span>
                                 <div class="card-icon3">
-                                <i class="fa-solid fa-chalkboard-user"></i>
+                                <i class="fa-solid fa-chalkboard-user" style="position: relative; left: 85px;"></i>
                                 </div>
                             </div>
 
-                            <h1 class="card-count3">/*$tutorsCount*/</h1>
+                            <h1 class="card-count3" style="position: relative; left: 90px;">{{$totalTutors}}</h1>
                             </div>
 
                         </div>
@@ -202,11 +202,11 @@
                             <div class="card-header4">
                                 <span class="card-title4">Admins</span>
                                 <div class="card-icon4">
-                                <i class="fa-solid fa-person-military-pointing"></i>
+                                <i class="fa-solid fa-person-military-pointing" style="position: relative; left: 80px;"></i>
                                 </div>
                             </div>
 
-                            <h1 class="card-count4">/*$adminsCount*/</h1>
+                            <h1 class="card-count4" style="position: relative; left: 80px;">{{$totalAdmins}}</h1>
                             </div>
 
                         </div>
@@ -343,33 +343,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        $('#viewAllTransactionsModal').on('show.bs.modal', function () {
-        loadModalPage(1); // Automatically load the first page
-    });
-
-    function loadModalPage(page) {
-        $.ajax({
-            url: '/transactions?page=' + page, // Adjust URL as necessary
-            type: 'GET',
-            success: function(data) {
-                $('#modal-body tbody').empty(); // Clear existing data
-                data.transactions.forEach(function(transaction) {
-                    $('#modal-body tbody').append(`
-                        <tr>
-                            <td>${transaction.transaction_date}</td>
-                            <td>${transaction.transaction_type}</td>
-                            <td>${transaction.reference_number}</td>
-                        </tr>
-                    `);
-                });
-            },
-            error: function() {
-                console.error('Error loading transactions');
-            }
-        });
-    }
+    
     </script>
     <script src="{{asset('assets/js/modal.js')}}"></script>
+    <script src="{{asset('assets/js/ajax-table-modal.js')}}"></script>
     <script src="{{asset('assets/js/img-lock.js')}}"></script>
     <script src="{{asset('assets/js/responsive.js')}}"></script>
 </body>
